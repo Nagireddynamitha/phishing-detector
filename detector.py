@@ -54,6 +54,11 @@ def scan_from_file(file_path):
 # Run the scanner
 if __name__ == "__main__":
     print("== Phishing URL Detection ==")
-    scan_from_file("phishing_urls.txt")
+    test_url = input("Enter a URL to scan: ").strip()
+    print(f"\n[SCAN] {test_url}")
+    verdict = is_phishing_url(test_url)
+    for v in verdict:
+        print(v)
+
 
 
